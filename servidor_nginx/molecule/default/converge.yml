@@ -1,0 +1,9 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Aplicar a role do Nginx
+      ansible.builtin.include_role:
+        name: alexsabrasil.servidor_nginx
